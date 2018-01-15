@@ -1,0 +1,21 @@
+/**
+ * @package	JE Ajax Contact Module !
+ * @version	1.1.0
+ * @author	jooexpert.com
+ * @copyright	Copyright (C) 2018 jooexpert. All rights reserved.
+ * @license	jooexpert
+ */
+ 
+.je_ajax_contact_wrap{
+	padding: 15px 0;
+}
+
+#result{
+	margin: 15px 0;
+    padding: 10px;
+    text-align: center;
+}
+
+.text-alert{
+	border-color: red !important;
+}

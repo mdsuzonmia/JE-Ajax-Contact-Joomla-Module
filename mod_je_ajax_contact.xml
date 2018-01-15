@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension type="module" version="3.1" client="site" method="upgrade">
+	<name>JE Ajax Contact</name>
+	<author>mdsuzonmia</author>
+	<creationDate>January 2018</creationDate>
+	<copyright>Copyright (C) 2018 jooexpert. All rights reserved.</copyright>
+	<license>GNU General Public License version 2 or later; see LICENSE.txt</license>
+	<authorEmail>mdsuzonmia@jooexpert.com</authorEmail>
+	<authorUrl>www.jooexpert.com</authorUrl>
+	<version>1.1.0</version>
+	<description>
+		<![CDATA[
+	    <span class="readonly"><h1>JE Ajax Contact Module </h1>
+		<p class="alert alert-info">This module simply use on your Joomla! website.</p>
+		<p class="alert">You may not duplicate or distribute our goods (modules) in any other way or offer them to download on the Internet. The copyright & the link in the source / backend may not be removed without our consent.<br/><a href="www.jooexpert.com" target="_blank">www.jooexpert.com</a></p>
+		 
+		<h2>Enjoy this fantastic module presented by,</h2>
+		<p><a href="www.jooexpert.com" target="_blank"><img src="https://kay-birkner.de/images/logo/logo.png" width="200" height="50"/></a></p>
+	    </span>
+        <style type="text/css">
+		    span.readonly h1 { clear:both; font-family: Arial; font-size:26px; margin: 0 26px 10px; color:#333; font-weight: normal; border-bottom: 1px solid #eee; }
+		    span.readonly h2 { clear:both; font-family: Georgia, sans-serif; font-size:20px; margin: 30px 26px 10px; color:#333; font-weight: normal; }
+			span.readonly { padding: 10px; font-family: Arial; font-size:13px !important; font-weight: normal !important; text-align: justify; color: #4d4d4d; line-height: 24px; }
+			span.readonly p { margin: 0 26px 10px }
+			span.readonly p.margintop { margin-top: 30px }
+			span.readonly p.license { border-top: 1px solid #eee; font-size: 11px; margin: 30px 26px 0; padding: 6px 0; }
+			.alert-danger .alert-link { color: #843534 } .alert .alert-link { font-weight: 700 }
+        </style>
+		]]>
+	</description>
+
+	<languages folder="language">
+		<language tag="en-GB">en-GB.mod_je_ajax_contact.ini</language>
+	</languages>
+	
+	<files>
+		<filename module="mod_je_ajax_contact">mod_je_ajax_contact.php</filename>
+		<folder>tmpl</folder>
+		<filename>helper.php</filename>
+	</files>
+	
+	
+	<config>
+		<fields name="params">
+			<fieldset name="basic">
+
+				
+				<field name="subjectPrefix" type="text" label="JE_AJAX_CONTACT_SUBJECT_PREFIX" hint="JE_AJAX_CONTACT_SUBJECT_PREFIX_HINT" />
+				<field name="emailto" type="text" label="JE_AJAX_CONTACT_EMAIL_TO" hint ="JE_AJAX_CONTACT_EMAIL_TO_HINT" />
+                <field name="thankyou" type="textarea" default="Congratulations. Your message has been sent successfully" label="JE_AJAX_CONTACT_THANK_YOU" description="" rows="5" cols="5" />
+				
+
+			</fieldset>
+
+			
+
+			<fieldset name="advanced">
+				<field
+					name="layout"
+					type="modulelayout"
+					label="JFIELD_ALT_LAYOUT_LABEL"
+					description="JFIELD_ALT_MODULE_LAYOUT_DESC"
+				/>
+
+				<field
+					name="moduleclass_sfx"
+					type="textarea" rows="3"
+					label="COM_MODULES_FIELD_MODULECLASS_SFX_LABEL"
+					description="COM_MODULES_FIELD_MODULECLASS_SFX_DESC"
+					default="  "
+				/>
+
+				<field
+					name="cache"
+					type="list"
+					label="COM_MODULES_FIELD_CACHING_LABEL"
+					description="COM_MODULES_FIELD_CACHING_DESC"
+					default="1"
+					>
+					<option value="1">JGLOBAL_USE_GLOBAL</option>
+					<option value="0">COM_MODULES_FIELD_VALUE_NOCACHING</option>
+				</field>
+
+				<field
+					name="cache_time"
+					type="text"
+					label="COM_MODULES_FIELD_CACHE_TIME_LABEL"
+					description="COM_MODULES_FIELD_CACHE_TIME_DESC"
+					default="900"
+				/>
+
+				<field
+					name="cachemode"
+					type="hidden"
+					default="itemid"
+					>
+					<option value="itemid"></option>
+				</field>
+			</fieldset>
+		</fields>
+	</config>
+</extension>
